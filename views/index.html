@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">                
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>clear</title>
+  <link rel="stylesheet" type="text/css" href="/static/m.css"/>
+  <script type="text/javascript" src="/static/jquery-3.1.1.min.js"></script>
+ </head>
+ <body>
+  <header>等待是一场与时光的较量</header>
+  <div class="searchContainer">
+  	<form id="mf" action="/fb">
+  		<input class="search" name="q">
+  		<!-- <button type="button" action="/g">Google</button> -->
+      		<button type="button" action="/fb">首图</button>
+  		<!-- <button type="button" action="/fi">Google Image</button> -->
+  	</form>
+  </div>
+  <script type="text/javascript">
+    $('button').click((event)=>{
+      var $this = $(event.target)
+      $('form').attr('action',$this.attr('action'))
+      $('form').submit()
+    })
+  </script>
+ </body>
+</html>
